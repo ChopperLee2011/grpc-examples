@@ -1,0 +1,18 @@
+syntax = "proto3";
+package demo;
+service Chat {
+  rpc sayHi(userName) returns (welMessage) {}
+
+  rpc ChatWith(stream chatNote) returns (stream chatNote) {}
+
+}
+message userName {
+  string name = 1;
+}
+message welMessage {
+  string message = 1;
+}
+
+message chatNote {
+  string message = 1;
+}
